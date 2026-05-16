@@ -197,8 +197,8 @@ function handleFormSubmit(e) {
     submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
     
-    // Send to FormSubmit via AJAX
-    fetch("https://formsubmit.co/ajax/softappix@gmail.com", {
+    // Send to Web3Forms via AJAX
+    fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { 
             'Content-Type': 'application/json',
@@ -206,16 +206,21 @@ function handleFormSubmit(e) {
         },
         body: JSON.stringify(data)
     })
-    .then(response => response.json())
-    .then(result => {
-        showFormSuccess(data);
-        contactForm.reset();
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
+    .then(async (response) => {
+        let json = await response.json();
+        if (response.status == 200) {
+            showFormSuccess(data);
+            contactForm.reset();
+        } else {
+            console.error('Web3Forms Error:', json);
+            alert(json.message || 'There was an error sending your message. Please try again.');
+        }
     })
     .catch(error => {
         console.error('Error:', error);
         alert('There was an error sending your message. Please try again.');
+    })
+    .finally(() => {
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
     });
