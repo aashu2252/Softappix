@@ -124,20 +124,20 @@ export default function Services() {
               <Link to="/" state={{ scrollToContact: true }} className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>Build Your Store →</Link>
             </div>
 
-            {/* AI Integrations */}
-            <div className="service-card" id="ai-integrations">
-              <div className="service-icon">🤖</div>
-              <h3 className="service-title">AI Integrations</h3>
-              <p className="service-description">Bring intelligent automation to your business. From AI-powered chatbots to smart recommendation engines, we embed cutting-edge AI into your existing workflows.</p>
+            {/* Software Development */}
+            <div className="service-card" id="software-development">
+              <div className="service-icon">💻</div>
+              <h3 className="service-title">Software Development</h3>
+              <p className="service-description">Custom-built software solutions tailored to your business needs. From internal tools to full-scale SaaS platforms, we engineer robust, scalable applications that solve real problems.</p>
               <ul className="service-features" style={{ marginBottom: '24px' }}>
-                <li>AI-Powered Customer Support</li>
-                <li>WhatsApp Bot Integration</li>
-                <li>Google Gemini & OpenAI APIs</li>
-                <li>Workflow Automation & AI Emails</li>
-                <li>Demand Forecasting & Sentiment Analysis</li>
-                <li>LangChain Development</li>
+                <li>Custom Web Application Development</li>
+                <li>SaaS Platform Engineering</li>
+                <li>REST API & Backend Development</li>
+                <li>Database Design & Optimization</li>
+                <li>Third-Party System Integration</li>
+                <li>Legacy Software Modernisation</li>
               </ul>
-              <Link to="/" state={{ scrollToContact: true }} className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>Innovate with AI →</Link>
+              <Link to="/" state={{ scrollToContact: true }} className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>Build Your Software →</Link>
             </div>
 
             {/* Mobile App Development */}

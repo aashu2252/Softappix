@@ -196,9 +196,9 @@ export default function Home() {
               <p className="service-description">Seamless online storefronts and payment integrations designed to convert visitors into loyal customers.</p>
             </div>
             <div className="service-card">
-              <div className="service-icon">🤖</div>
-              <h3 className="service-title">AI Integrations</h3>
-              <p className="service-description">Smart automation and intelligent chatbots that embed cutting-edge AI directly into your business workflows.</p>
+              <div className="service-icon">💻</div>
+              <h3 className="service-title">Software Development</h3>
+              <p className="service-description">Custom-built software, SaaS platforms and backend APIs engineered to solve real business problems at scale.</p>
             </div>
             <div className="service-card">
               <div className="service-icon">📱</div>
@@ -535,7 +535,7 @@ export default function Home() {
                     <option value="web-development">Web Development</option>
                     <option value="digital-strategy">Digital Strategy</option>
                     <option value="ecommerce">E-commerce</option>
-                    <option value="ai-integration">AI Integration</option>
+                    <option value="software-development">Software Development</option>
                     <option value="other">Other</option>
                   </select>
                 </div>

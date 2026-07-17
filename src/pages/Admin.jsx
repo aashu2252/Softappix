@@ -479,7 +479,7 @@ export default function Admin() {
                     <option value="Web Development">Web Development</option>
                     <option value="Digital Strategy">Digital Strategy</option>
                     <option value="E-commerce">E-commerce</option>
-                    <option value="AI Integration">AI Integration</option>
+                    <option value="Software Development">Software Development</option>
                   </select>
                 </div>
 

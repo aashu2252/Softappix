@@ -161,12 +161,12 @@ export default function About() {
               <h2 className="founder-name">Aashutosh Kumar</h2>
               <p className="founder-role">Founder & Full-Stack Developer</p>
               <p className="founder-bio">A self-driven developer and digital strategist based in Indore, Madhya Pradesh. Aashutosh founded SoftAppix with a clear vision: to give local businesses the same digital firepower as big-city enterprises — without the big-city price tag.</p>
-              <p className="founder-bio">With expertise spanning React, Python, Firebase, and AI integrations, he leads every project end-to-end, ensuring technical excellence meets real business outcomes. He has personally delivered 10+ projects ranging from high-conversion landing pages to AI-powered automation tools.</p>
+              <p className="founder-bio">With expertise spanning React, Python, Node.js, and custom software development, he leads every project end-to-end, ensuring technical excellence meets real business outcomes. He has personally delivered 10+ projects ranging from high-conversion landing pages to full-scale SaaS platforms.</p>
               <div className="founder-tags">
                 <span className="founder-tag">React & Vite</span>
                 <span className="founder-tag">Python</span>
                 <span className="founder-tag">Firebase</span>
-                <span className="founder-tag">AI Integrations</span>
+                <span className="founder-tag">Software Development</span>
                 <span className="founder-tag">SEO Strategy</span>
                 <span className="founder-tag">UI/UX Design</span>
                 <span className="founder-tag">Cloud Infrastructure</span>

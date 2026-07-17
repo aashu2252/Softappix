@@ -48,7 +48,7 @@ export default function Footer() {
                 <li><button onClick={() => handleServiceLink('web-development')} className="footer-nav-btn">Web Development</button></li>
                 <li><button onClick={() => handleServiceLink('digital-strategy')} className="footer-nav-btn">Digital Strategy</button></li>
                 <li><button onClick={() => handleServiceLink('ecommerce')} className="footer-nav-btn">E-commerce</button></li>
-                <li><button onClick={() => handleServiceLink('ai-integrations')} className="footer-nav-btn">AI Integrations</button></li>
+                <li><button onClick={() => handleServiceLink('software-development')} className="footer-nav-btn">Software Development</button></li>
               </ul>
             </div>
             <div className="footer-column">

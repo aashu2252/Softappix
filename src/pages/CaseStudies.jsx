@@ -51,7 +51,7 @@ export default function CaseStudies() {
     if (filter === 'web-development') return normalizedTag === 'web-development'
     if (filter === 'digital-strategy') return normalizedTag === 'digital-strategy'
     if (filter === 'ecommerce') return normalizedTag === 'e-commerce' || normalizedTag === 'ecommerce'
-    if (filter === 'ai') return normalizedTag.includes('ai')
+    if (filter === 'software-development') return normalizedTag === 'software-development'
     
     return false
   })
@@ -131,10 +131,10 @@ export default function CaseStudies() {
               E-commerce
             </button>
             <button 
-              className={`filter-btn ${filter === 'ai' ? 'active' : ''}`}
-              onClick={() => setFilter('ai')}
+              className={`filter-btn ${filter === 'software-development' ? 'active' : ''}`}
+              onClick={() => setFilter('software-development')}
             >
-              AI Integration
+              Software Development
             </button>
           </div>
 
