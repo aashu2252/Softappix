@@ -99,7 +99,7 @@ INSERT INTO public.case_studies (
     'Complete industrial service listing, technical evaluation showcase, and response optimization.',
     ARRAY['HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS'],
     'Built a clean, modern B2B portal using HTML, CSS, and vanilla JS to highlight their technical maintenance operations and support services.',
-    'Digital Strategy',
+    'Web Development',
     'https://globaltechinds.com',
     'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80', -- Initial UI design placeholder
     NULL,

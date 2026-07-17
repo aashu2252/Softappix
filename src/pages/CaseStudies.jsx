@@ -2,39 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { supabase } from '../supabaseClient'
 
-const LOCAL_FALLBACK_CASE_STUDIES = [
-  {
-    id: 1,
-    company: 'Alacrity Enterprises',
-    hook: 'B2B Industrial Wholesale & Export Platform',
-    challenge: 'Establishing a professional wholesale web presence to capture global B2B leads and showcase reliability.',
-    solution: 'Developed a high-conversion showcase website using semantic HTML, custom CSS, and vanilla JS (Tailwind).',
-    keyFeature: 'Responsive product catalog grid, category tabs, and contact form integration.',
-    techUsed: ['HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS'],
-    outcome: 'Developed a high-conversion wholesale showcase website using HTML, CSS, and vanilla JS to display their industrial tape catalogs and electrical goods globally.',
-    tag: 'Web Development',
-    link: 'https://alacrityenterprises.com',
-    image_url: 'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=800&q=80',
-    lead_increase: '↑ 300%',
-    bounce_rate: '↓ 80%'
-  },
-  {
-    id: 2,
-    company: 'Global Tech Industries',
-    hook: 'Industrial Maintenance & B2B Service Platform',
-    challenge: 'Developing a global-standard service portal to highlight B2B maintenance operations and support services.',
-    solution: 'Built a clean, modern B2B portal using semantic HTML, custom CSS, and vanilla JS (Tailwind).',
-    keyFeature: 'Complete industrial service listing, technical evaluation showcase, and response optimization.',
-    techUsed: ['HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS'],
-    outcome: 'Built a clean, modern B2B portal using HTML, CSS, and vanilla JS to highlight their technical maintenance operations and support services.',
-    tag: 'Digital Strategy',
-    link: 'https://globaltechinds.com',
-    image_url: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
-    seo_ranking: 'Top 3',
-    organic_traffic: '↑ 200%'
-  }
-]
-
 export default function CaseStudies() {
   const [caseStudies, setCaseStudies] = useState([])
   const [filter, setFilter] = useState('all')
@@ -55,24 +22,20 @@ export default function CaseStudies() {
 
       if (error) throw error
 
-      if (data && data.length > 0) {
-        // Convert camelCase columns if Supabase returns database underscore columns
-        const formattedData = data.map(study => ({
-          ...study,
-          techUsed: study.tech_used || study.techUsed || [],
-          image_url: study.image_url || study.imageUrl,
-          lead_increase: study.lead_increase || study.leadIncrease,
-          bounce_rate: study.bounce_rate || study.bounceRate,
-          seo_ranking: study.seo_ranking || study.seoRanking,
-          organic_traffic: study.organic_traffic || study.organicTraffic
-        }))
-        setCaseStudies(formattedData)
-      } else {
-        setCaseStudies(LOCAL_FALLBACK_CASE_STUDIES)
-      }
+      // Normalize snake_case DB columns to camelCase used in JSX
+      const formattedData = (data || []).map(study => ({
+        ...study,
+        techUsed: study.tech_used || study.techUsed || [],
+        image_url: study.image_url || study.imageUrl,
+        lead_increase: study.lead_increase || study.leadIncrease,
+        bounce_rate: study.bounce_rate || study.bounceRate,
+        seo_ranking: study.seo_ranking || study.seoRanking,
+        organic_traffic: study.organic_traffic || study.organicTraffic
+      }))
+      setCaseStudies(formattedData)
     } catch (err) {
-      console.warn('Could not fetch from Supabase. Falling back to local data:', err.message)
-      setCaseStudies(LOCAL_FALLBACK_CASE_STUDIES)
+      console.warn('Could not fetch from Supabase:', err.message)
+      setCaseStudies([])
     } finally {
       setLoading(false)
     }
