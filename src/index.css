@@ -1900,7 +1900,7 @@ img {
 
 .founder-avatar {
     border-radius: var(--radius-base);
-    aspect-ratio: 1;
+    aspect-ratio: 3 / 4;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1913,6 +1913,7 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center top;
     transition: var(--transition);
 }
 
